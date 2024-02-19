@@ -10,20 +10,20 @@ public static class MemberInfoExtension
     /// <summary>
     /// Determines whether the specified MemberInfo is a field.
     /// </summary>
-    /// <param name="member">The MemberInfo to check.</param>
+    /// <param name="memberInfo">The MemberInfo to check.</param>
     /// <returns><c>true</c> if the specified MemberInfo is a field; otherwise, <c>false</c>.</returns>
-    internal static bool IsField(this System.Reflection.MemberInfo member)
+    public static bool IsField(this System.Reflection.MemberInfo memberInfo)
     {
-        return member.MemberType == MemberTypes.Field;
+        return memberInfo.MemberType == MemberTypes.Field;
     }
 
     /// <summary>
     /// Determines whether the specified MemberInfo is a property.
     /// </summary>
-    /// <param name="member">The MemberInfo to check.</param>
+    /// <param name="memberInfo">The MemberInfo to check.</param>
     /// <returns><c>true</c> if the specified MemberInfo is a property; otherwise, <c>false</c>.</returns>
-    internal static bool IsProperty(this System.Reflection.MemberInfo member)
+    public static bool IsProperty(this System.Reflection.MemberInfo memberInfo)
     {
-        return member.MemberType == MemberTypes.Property;
+        return memberInfo.MemberType == MemberTypes.Property;
     }
 }
