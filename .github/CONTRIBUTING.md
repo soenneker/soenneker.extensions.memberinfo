@@ -1,4 +1,4 @@
-# Contributing to Soenneker.Extensions.MemberInfo
+﻿# Contributing to Soenneker.Extensions.MemberInfo
 
 We're excited that you're interested in contributing!
 
