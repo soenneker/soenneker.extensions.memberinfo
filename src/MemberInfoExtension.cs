@@ -1,4 +1,5 @@
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace Soenneker.Extensions.MemberInfo;
 
@@ -12,6 +13,7 @@ public static class MemberInfoExtension
     /// </summary>
     /// <param name="memberInfo">The MemberInfo to check.</param>
     /// <returns><c>true</c> if the specified MemberInfo is a field; otherwise, <c>false</c>.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool IsField(this System.Reflection.MemberInfo memberInfo)
     {
         return memberInfo.MemberType == MemberTypes.Field;
@@ -22,6 +24,7 @@ public static class MemberInfoExtension
     /// </summary>
     /// <param name="memberInfo">The MemberInfo to check.</param>
     /// <returns><c>true</c> if the specified MemberInfo is a property; otherwise, <c>false</c>.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool IsProperty(this System.Reflection.MemberInfo memberInfo)
     {
         return memberInfo.MemberType == MemberTypes.Property;
