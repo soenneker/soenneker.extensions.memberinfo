@@ -4,10 +4,24 @@
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.extensions.memberinfo/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.extensions.memberinfo/actions/workflows/codeql.yml)
 
 # ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Extensions.MemberInfo
-### A collection of helpful MemberInfo (Reflection) extension methods
+A collection of helpful MemberInfo (Reflection) extension methods.
 
 ## Installation
 
-```
+```bash
 dotnet add package Soenneker.Extensions.MemberInfo
 ```
+
+## Quick start
+
+```csharp
+using Soenneker.Extensions.MemberInfo;
+
+// Given an existing System.Reflection.MemberInfo named memberInfo:
+var result = memberInfo.IsField();
+```
+
+## Common operations
+
+- `IsField()` - Determines whether the specified MemberInfo is a field.
+- `IsProperty()` - Determines whether the specified MemberInfo is a property.
